@@ -1,0 +1,18 @@
+[user]
+	name = Abenezer Abebe
+	email = abenezerabebe@gmail.com
+[color]
+	ui = auto
+[core]
+	excludesfile = /Users/abenezerabebe/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/abenezerabebe/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[rebase]
+	autosquash = true
+[grep]
+	lineNumber = true

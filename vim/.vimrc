@@ -54,19 +54,31 @@ nmap k gk
 " ctrlp Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
+" netrw recursively removes files and directory
+:let g:netrw_localrmdir='rm -r'
+
 " Run Prettier on save
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Run Black on save
 autocmd BufWritePre *.py execute ':Black'
-"
+
+" sync vim with base16-shell
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 " Specify a directory for plugins
-" " - For Neovim: ~/.local/share/nvim/plugged
-" " - Avoid using standard Vim directory names like 'plugin'
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'python/black'
+Plug 'udalov/kotlin-vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'chriskempson/base16-vim'
 call plug#end()

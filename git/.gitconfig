@@ -1,6 +1,8 @@
 [user]
 	name = Abenezer Abebe
 	email = abenezerabebe@gmail.com
+[includeIf "gitdir:~/src/"]
+    path = ~/src/.gitconfig
 [color]
 	ui = auto
 [core]

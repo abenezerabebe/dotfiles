@@ -1,0 +1,26 @@
+[include]
+    path = ~/.gitconfig.local
+[includeIf "gitdir:~/src/"]
+    path = ~/src/.gitconfig
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool "intellij"]
+	cmd = idea diff \"$LOCAL\" \"$REMOTE\"
+[mergetool "intellij"]
+	cmd = idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[rebase]
+	autosquash = true
+[grep]
+	lineNumber = true

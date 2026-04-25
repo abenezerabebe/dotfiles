@@ -1,0 +1,45 @@
+tap "flyteorg/tap"
+tap "homebrew/services"
+
+# Core tools
+brew "ffmpeg"
+brew "fzf"
+brew "git"
+brew "git-lfs"
+brew "jq"
+brew "tmux"
+brew "vim"
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-git-prompt"
+brew "pre-commit"
+
+# Java / JVM
+brew "bazelisk"
+brew "buildifier"
+brew "gradle@7"
+brew "jenv"
+brew "maven"
+brew "sbt"
+brew "scala"
+
+# Runtime / languages
+brew "node"
+brew "pyenv"
+brew "python-setuptools"
+brew "python@3.10"
+
+# Cloud / infra
+brew "grpcurl"
+brew "flyteorg/tap/flytectl"
+
+# Apps
+cask "corretto@25"
+cask "discord"
+cask "figma"
+cask "gcloud-cli"
+cask "google-drive"
+cask "intellij-idea"
+cask "iterm2"
+cask "spectacle"
+cask "spotify"

@@ -1,0 +1,9 @@
+# Machine- or work-specific env vars — copy to ~/.zshrc.local and fill in.
+# This file is NOT committed.
+
+# Work user identifiers
+export WORK_USERNAME=
+export WORK_USERID=
+
+# Work-specific tool paths (only added if directory exists)
+# _addpath "/opt/your-company-tools/bin"

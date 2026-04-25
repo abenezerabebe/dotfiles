@@ -1,0 +1,3 @@
+tap "your-org/internal-tap", "git@github.your-company.com:team/homebrew-tap.git"
+
+brew "your-org/internal-tap/some-tool"

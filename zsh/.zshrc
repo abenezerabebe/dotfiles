@@ -70,6 +70,10 @@ fi
 [ -f "$HOME/.zshrc.secrets" ] && source "$HOME/.zshrc.secrets"
 [ -f "$HOME/.zshrc.local" ]   && source "$HOME/.zshrc.local"
 
+##### Key bindings #############################################################
+
+bindkey '^R' history-incremental-search-backward
+
 ##### Aliases ##################################################################
 
 alias ll='ls -alF'

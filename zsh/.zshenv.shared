@@ -1,3 +1,7 @@
+# Always define functions first — they don't propagate across exec, so child
+# shells that inherit the __ZSHENV_SHARED guard still need them defined.
+_addpath() { [ -d "$1" ] && path+="$1"; }
+
 # Prevent double-sourcing within the same shell.
 # Do NOT export — child shells (e.g. tmux panes) must re-source this file so
 # shell functions like _addpath get redefined (functions don't propagate
@@ -71,6 +75,5 @@ export EDITOR="vim"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-_addpath() { [ -d "$1" ] && path+="$1"; }
 typeset -U path PATH
 export PATH
